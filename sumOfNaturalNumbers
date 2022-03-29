@@ -1,0 +1,21 @@
+import java.util.*;
+
+public class sumOfNaturalNumbers {
+    public static void main(String[] args) {
+        
+        System.out.println("Sum of natural numbers till n");
+        System.out.println("Please enter the natural number :" );
+        Scanner in = new Scanner(System.in);
+        String number = in.nextLine();
+        Integer numberInt = Integer.parseInt(number);
+        int sumOfNumbers = sum(numberInt);
+        System.out.println("Sum of numbers :"+sumOfNumbers);
+        
+    }
+    
+    public static int sum(int n){
+        if(n==1)
+          return 1;
+        return sum(n-1)+n;
+    }
+}
